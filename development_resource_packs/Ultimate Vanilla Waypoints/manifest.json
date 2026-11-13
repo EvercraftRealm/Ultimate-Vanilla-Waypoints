@@ -1,0 +1,30 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Ultimate Vanilla Waypoints v1.1.7 (Resources)",
+    "description": "pack.description",
+    "uuid": "69b536dc-af2e-48f7-bfc5-4d690370051d",
+    "min_engine_version": [1, 26, 60],
+    "version": [1, 1, 7],
+    "pack_scope": "world"
+  },
+  "modules": [
+    {
+      "type": "resources",
+      "uuid": "13233363-0f80-4e0d-ab75-1c8d7493b33d",
+      "version": [1, 1, 7]
+    }
+  ],
+  "metadata": {
+    "product_type": "addon",
+    "authors": ["§bEndermen76428§r & §5Heartiorn", "EvercraftRealm"],
+    "url": "https://github.com/EvercraftRealm/Ultimate-Vanilla-Waypoints"
+  },
+  "capabilities": ["pbr"],
+  "dependencies": [
+    {
+      "uuid": "42ac95b9-29a0-4d5f-91e3-a0a88a83c00c",
+      "version": [1, 1, 7]
+    }
+  ]
+}

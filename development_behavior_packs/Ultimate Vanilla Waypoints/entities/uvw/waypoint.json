@@ -1,0 +1,39 @@
+{
+  "format_version": "1.19.30",
+  "minecraft:entity": {
+    "description": {
+      "identifier": "uvw:waypoint",
+      "is_spawnable": true,
+      "is_summonable": true,
+      "is_experimental": false
+    },
+
+    "component_groups": {
+      "uvw:despawn": {
+        "minecraft:timer": {
+          "time": 1.5,
+          "time_down_event": { "event": "uvw:despawn" }
+        }
+      },
+
+      "uvw:instant_despawn": { "minecraft:instant_despawn": {} }
+    },
+
+    "components": {
+      "minecraft:type_family": { "family": ["waypoint"] },
+      "minecraft:damage_sensor": {
+        "triggers": { "cause": "all", "deals_damage": false }
+      },
+      "minecraft:fire_immune": true,
+      "minecraft:movement": { "value": 0 },
+      "minecraft:collision_box": { "width": 0, "height": 0 },
+      "minecraft:physics": { "has_collision": false, "has_gravity": false },
+      "minecraft:tick_world": {}
+    },
+
+    "events": {
+      "uvw:start_despawn": { "add": { "component_groups": ["uvw:despawn"] } },
+      "uvw:despawn": { "add": { "component_groups": ["uvw:instant_despawn"] } }
+    }
+  }
+}

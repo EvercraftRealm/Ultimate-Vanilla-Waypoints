@@ -1,0 +1,10 @@
+{
+  "format_version": "1.21.100",
+  "minecraft:item": {
+    "description": {
+      "identifier": "uvw:addon_id",
+      "menu_category": { "category": "none", "is_hidden_in_commands": true }
+    },
+    "components": { "minecraft:icon": "uvw:null" }
+  }
+}

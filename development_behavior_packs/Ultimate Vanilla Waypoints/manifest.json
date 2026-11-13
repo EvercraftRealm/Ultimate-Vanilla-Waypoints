@@ -1,0 +1,43 @@
+{
+  "format_version": 2,
+  "header": {
+    "name": "Ultimate Vanilla Waypoints v1.1.7 (Behavior)",
+    "description": "pack.description",
+    "uuid": "42ac95b9-29a0-4d5f-91e3-a0a88a83c00c",
+    "min_engine_version": [1, 26, 60],
+    "version": [1, 1, 7]
+  },
+  "modules": [
+    {
+      "type": "data",
+      "uuid": "0d59cdef-2ad8-4f44-892b-9881805d8a6c",
+      "version": [1, 1, 7]
+    },
+    {
+      "type": "script",
+      "language": "javascript",
+      "entry": "scripts/uvw/main.js",
+      "uuid": "8ed4eb2c-d82d-4394-a53c-0c57d42585d4",
+      "version": [1, 1, 7]
+    }
+  ],
+  "metadata": {
+    "product_type": "addon",
+    "authors": ["§bEndermen76428§r & §5Heartiorn", "EvercraftRealm"],
+    "url": "https://github.com/EvercraftRealm/Ultimate-Vanilla-Waypoints"
+  },
+  "dependencies": [
+    {
+      "uuid": "69b536dc-af2e-48f7-bfc5-4d690370051d",
+      "version": [1, 1, 7]
+    },
+    {
+      "module_name": "@minecraft/server",
+      "version": "2.10.0"
+    },
+    {
+      "module_name": "@minecraft/server-ui",
+      "version": "2.0.0"
+    }
+  ]
+}

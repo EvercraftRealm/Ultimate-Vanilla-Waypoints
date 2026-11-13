@@ -1,0 +1,185 @@
+### Command
+commands.uvw.main_panel=Abre o Painel Principal dos Waypoints
+commands.uvw.teleport=Configura o teleporte e seus custos
+
+### Entity
+entity.uvw:waypoint.name=Waypoint
+
+### Item
+item.uvw:waypoint_item=Waypoints
+
+### UI
+## Main Painel
+ui.uvw:config.title=Waypoints
+ui.uvw:config.button.my=Meus Waypoints
+ui.uvw:config.button.teleport=Teleportar
+ui.uvw:tp.confirm.title=Confirmar Teleporte
+ui.uvw:tp.confirm.body=Teleportar para "§a%1§r"?\nCusto: %2
+ui.uvw:config.button.create=Criar Ponto
+ui.uvw:config.button.edit=Editar Ponto
+ui.uvw:edit.visible=Editar Visibilidade
+ui.uvw:config.button.remove=Remover Ponto
+ui.uvw:config.button.options=Opções
+ui.uvw:config.button.admin=Configuração Global
+
+## Teleport
+ui.uvw:tp.title=Teleportar para o Waypoint
+
+## Create/Edit
+ui.uvw:create.title=Criar Waypoint
+ui.uvw:edit.title=Editar Waypoints
+ui.uvw:create.name=Nome do Waypoint:
+ui.uvw:create.name_hold=Coloque o nome aqui
+ui.uvw:create.pos=Posição do Waypoint:
+ui.uvw:create.pos_hold=Exemplo: -7, 61, 43
+ui.uvw:create.turn_off_close=Desativar quando Perto
+ui.uvw:create.icon=Icone do Waypoint:
+ui.uvw:create.icon.basic=Básico
+ui.uvw:create.icon.first_letter=Primeira Letra
+ui.uvw:create.icon.death=Morte
+ui.uvw:create.icon.house=Casa
+ui.uvw:create.icon.sword=Espada
+ui.uvw:create.icon.pickaxe=Picareta
+ui.uvw:create.icon.axe=Machado
+ui.uvw:create.icon.hoe=Enxada
+ui.uvw:create.icon.town=Cidade
+ui.uvw:create.icon.gear=Engrenagem
+ui.uvw:create.icon.signpost=Placa de Direção
+ui.uvw:create.color=Cor do Waypoint:
+ui.uvw.create.color.0=§lBranco
+ui.uvw.create.color.1=§l§iCinza Claro
+ui.uvw.create.color.2=§l§jCinza
+ui.uvw.create.color.3=§l§0Preto
+ui.uvw.create.color.4=§l§mMarrom
+ui.uvw.create.color.5=§l§cVermelho
+ui.uvw.create.color.6=§l§6Laranja
+ui.uvw.create.color.7=§l§eAmarelo
+ui.uvw.create.color.8=§l§aVerde-Limão
+ui.uvw.create.color.9=§l§2Verde
+ui.uvw.create.color.10=§l§3Ciano
+ui.uvw.create.color.11=§l§bAzul Claro
+ui.uvw.create.color.12=§l§1Azul
+ui.uvw.create.color.13=§l§uLilás
+ui.uvw.create.color.14=§l§5Magenta
+ui.uvw.create.color.15=§l§dRosa
+ui.uvw:create.slider_r=§cR
+ui.uvw:create.slider_g=§aG
+ui.uvw:create.slider_b=§sB
+ui.uvw:create.visible=É visivel
+ui.uvw:create.button_save=Salvar
+
+## Delete
+ui.uvw:delete.title=Deletar Waypoint
+ui.uvw:delete.body=Escolha um para deletar:
+ui.uvw:delete.buttonDelete=Deletar
+ui.uvw:delete.confirm1=Você realmente quer deletar "§a%1§r"
+ui.uvw:delete.confirm2= em §3%1§r
+ui.uvw:yes=Sim
+ui.uvw:no=Não
+
+## Share
+ui.uvw:config.button.share=Compartilhar Waypoints
+ui.uvw:config.button.public=Waypoints Públicos
+ui.uvw:share.players=Selecione um Jogador para receber:
+ui.uvw:share.waypoints=Selecione um Waypoint para compartilhar:
+ui.uvw:share.confirm.body=Você quer compartilhar o waypoint: "§a%1§r" para §e%2§r?
+
+## Public Waypoints
+ui.uvw:public.title=Waypoints Públicos
+ui.uvw:public.view=Ver Waypoints Públicos
+ui.uvw:public.publish=Publicar um Waypoint
+ui.uvw:public.manage=Gerenciar Minhas Publicações
+ui.uvw:public.current_dimension=Waypoints públicos na dimensão atual:
+ui.uvw:public.details.publisher=Publicado por §e%1§r
+ui.uvw:public.visible=Visível na minha HUD
+ui.uvw:public.publish.choose=Escolha um dos seus waypoints para publicar:
+ui.uvw:public.publish.confirm=Publicar "§a%1§r" para todos verem?
+ui.uvw:public.manage.choose=Escolha um waypoint público para remover:
+ui.uvw:public.unpublish=Remover Publicação
+ui.uvw:public.unpublish.confirm=Remover "§a%1§r" dos Waypoints Públicos?
+ui.uvw:public.back=Voltar
+ui.uvw:public.close=Fechar
+
+## Options
+ui.uvw:options.title=Configurações
+ui.uvw:options.general.title=Configurações Gerais
+ui.uvw:options.general.toggle.showName=Mostrar Nome
+ui.uvw:options.general.toggle.showDistance=Mostrar Distância
+ui.uvw:options.general.toggle.showBeacon=Mostrar Sinalizador
+ui.uvw:options.general.toggle.alwaysShowInfo=Sempre Mostrar: Info
+ui.uvw:options.general.toggle.alwaysShowBeam=Sempre Mostrar: Sinalizador
+ui.uvw:options.general.toggle.showPos=Mostrar Posição
+ui.uvw:options.general.toggle.reciveSharing=Receber Compatilhamentos
+ui.uvw:options.general.toggle.createDeathPoint=Criar Ponto de Morte
+ui.uvw:options.general.dropdown.deathPointDate=Data do Ponto de Morte:
+ui.uvw:options.general.dropdown.deathPointUTC=Fuso Horário da Morte:
+
+ui.uvw:options.recover.title=Atualizar Waypoints
+
+## Admin Options
+ui.uvw:config.tp=Ativar Teleporte
+ui.uvw:config.cost.mode=Forma de Pagamento
+ui.uvw:config.cost.none=Grátis
+ui.uvw:config.cost.xp=Níveis de XP
+ui.uvw:config.cost.scoreboard=Placar
+ui.uvw:config.cost.ender_pearl=Pérolas do End
+ui.uvw:config.cost.amount=Custo por Cobrança
+ui.uvw:config.cost.blocks=Blocos por Cobrança
+ui.uvw:config.cost.blocks.placeholder=10-10000
+ui.uvw:config.cost.minimum=Distância Mínima para Cobrar
+ui.uvw:config.cost.objective=Objetivo do Placar
+ui.uvw:config.cost.objective.placeholder=waypoint_currency
+ui.uvw:config.cost.scoreboard_symbol=Símbolo da Moeda do Placar
+ui.uvw:config.cost.scoreboard_symbol.placeholder=Opcional: $, £ ou :heart:
+ui.uvw:config.cost.minimum_cost=Custo Mínimo
+ui.uvw:config.cost.maximum_cost=Custo Máximo
+ui.uvw:config.cost.optional=Opcional
+
+### Warining
+## General
+warn.uvw:dontHavePoints=§cVocê não tem waypoints nessa dimensão
+
+## Teleport
+warn.uvw:insufficientXp=§cVocê não tem XP suficiente!
+warn.uvw:insufficientScore=§cVocê não tem %1 suficiente!
+warn.uvw:insufficientPearls=§cVocê não tem Pérolas do End suficientes!
+warn.uvw:scoreboardUnavailable=§cO objetivo de placar configurado não está disponível.
+warn.uvw:teleportFailed=§cNão foi possível teleportar para esse waypoint.
+
+## Create/Edit
+warn.uvw:cancelCreatePoint=§cCriação do waypoint cancelada
+warn.uvw:invalidName=§cNome do waypoint inválido
+warn.uvw:invalidPos=§cPosição do waypoint inválido
+warn.uvw:failCreatePoint=§cFalha ao criar o waypoint
+warn.uvw:createPoint=Waypoint "§a%1§r" criado com sucesso
+warn.uvw:editPoint=Waypoint "§a%1§r" editado com sucesso
+warn.uvw:manyWaypoints=§cVocê tem muitos Waypoints ativos, para uma melhor performance deixe a visibilidade de Waypoints desnecessários deslidaga.
+
+## Delete
+warn.uvw:dontDelete=Nenhum waypoints deletado
+warn.uvw:waypointNotFound=§cNão foi possivel encontrar o Waypoint
+warn.uvw:deleted=Waypoints "§a%1§r" deletado
+
+## Share
+warn.uvw:noPlayersOnline=§cNão há Jogadores para compatilhar.
+warn.uvw:dontShared=Waypoint não compartilhado.
+warn.uvw:targetDontAcceptShare=Esse jogador não aceita compartilhamentos.
+warn.uvw:reciveWaypoint=Você recebeu um Waypoint. "§a%1§r" de §e%2.
+warn.uvw:alreadySent=§cVocê já compartilhou esse waypoint com essa pessoa.
+warn.uvw:playerOffline=§cJogador Offline, Waypoint não enviador.
+
+## Public Waypoints
+warn.uvw:noPublicWaypoints=§cNão há waypoints públicos nesta dimensão.
+warn.uvw:noOwnedPublicWaypoints=§cVocê não publicou waypoints nesta dimensão.
+warn.uvw:publicPublished=O waypoint "§a%1§r" agora é público.
+warn.uvw:publicUpdated=O waypoint público "§a%1§r" foi atualizado.
+warn.uvw:publicUnpublished=O waypoint "§a%1§r" não é mais público.
+
+## Settings
+warn.uvw:saveOptions=Todas as opções foram salvas
+warn.uvw:cancelOptions=§cAlterações desfeitas
+
+
+
+pack.description=Ultimate Vanilla Waypoints, baseado no Advanced Waypoints.
+pack.name=Ultimate Vanilla Waypoints v1.1 (Recursos)
