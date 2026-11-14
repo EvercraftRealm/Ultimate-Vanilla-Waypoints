@@ -1,0 +1,56 @@
+name: Release
+
+on:
+  push:
+    tags:
+      - "v*.*.*"
+
+permissions:
+  contents: write
+
+jobs:
+  release:
+    runs-on: windows-latest
+    steps:
+      - name: Check out source
+        uses: actions/checkout@v5
+
+      - name: Validate and package add-on
+        shell: pwsh
+        run: |
+          $ErrorActionPreference = 'Stop'
+          $behaviorPack = './development_behavior_packs/Ultimate Vanilla Waypoints'
+          $resourcePack = './development_resource_packs/Ultimate Vanilla Waypoints'
+          $behaviorManifest = Get-Content -Raw -LiteralPath "$behaviorPack/manifest.json" | ConvertFrom-Json
+          $resourceManifest = Get-Content -Raw -LiteralPath "$resourcePack/manifest.json" | ConvertFrom-Json
+          $version = $behaviorManifest.header.version -join '.'
+          $resourceVersion = $resourceManifest.header.version -join '.'
+          if ($resourceVersion -ne $version) {
+            throw "Pack versions do not match: behavior=$version, resource=$resourceVersion"
+          }
+          if ($env:GITHUB_REF_NAME -ne "v$version") {
+            throw "Tag $env:GITHUB_REF_NAME does not match manifest version $version"
+          }
+
+          New-Item -ItemType Directory -Force -Path './dist', './release-temp' | Out-Null
+          Compress-Archive -Path "$behaviorPack/*" -DestinationPath './release-temp/behavior.zip' -CompressionLevel Optimal
+          Compress-Archive -Path "$resourcePack/*" -DestinationPath './release-temp/resource.zip' -CompressionLevel Optimal
+          Move-Item './release-temp/behavior.zip' './release-temp/Ultimate-Vanilla-Waypoints-BP.mcpack'
+          Move-Item './release-temp/resource.zip' './release-temp/Ultimate-Vanilla-Waypoints-RP.mcpack'
+
+          $artifactName = "Ultimate-Vanilla-Waypoints-$version.mcaddon"
+          $archivePath = "./dist/Ultimate-Vanilla-Waypoints-$version.zip"
+          $artifactPath = "./dist/$artifactName"
+          Compress-Archive -Path './release-temp/*.mcpack' -DestinationPath $archivePath -CompressionLevel Optimal
+          Move-Item -LiteralPath $archivePath -Destination $artifactPath
+
+          $hash = (Get-FileHash -Algorithm SHA256 -LiteralPath $artifactPath).Hash.ToLowerInvariant()
+          "$hash  $artifactName" | Set-Content -NoNewline -Encoding ascii -LiteralPath "$artifactPath.sha256"
+
+      - name: Publish GitHub release
+        shell: pwsh
+        env:
+          GH_TOKEN: ${{ github.token }}
+        run: |
+          $artifact = Get-ChildItem -LiteralPath './dist' -Filter '*.mcaddon' | Select-Object -First 1
+          gh release create $env:GITHUB_REF_NAME $artifact.FullName "$($artifact.FullName).sha256" --generate-notes --title "Ultimate Vanilla Waypoints $env:GITHUB_REF_NAME"
